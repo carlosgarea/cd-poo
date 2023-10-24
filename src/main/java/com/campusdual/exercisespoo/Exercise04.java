@@ -12,6 +12,10 @@ public class Exercise04 {
         System.out.println(sumarPares());
         System.out.print("El factorial de 7 es: ");
         System.out.println(factorial());
+        // Con Loops
+        sumarPrimerosLoop(5);
+        sumarParesLoop(20);
+        factorialLoop(7);
     }
     public static int sumarPrimeros(){
         int suma = 1+2+3+4+5;
@@ -24,5 +28,30 @@ public class Exercise04 {
     public static int factorial(){
         int fact = 7*6*5*4*3*2*1;
         return fact;
+    }
+    public static void sumarPrimerosLoop(int n){
+        int result = 0;
+        for (int i=1; i<=n; i++){
+            result += i;
+        }
+        System.out.println("Los primeros "+n+" números suman "+result);
+    }
+    public static void sumarParesLoop(int n){
+        int result = 0;
+        for (int i=1; i<=n*2; i++){
+            if (i % 2 == 0){
+                result += i;
+            } else {
+                result += 0;
+            }
+        }
+        System.out.println("Los primeros "+n+" números pares suman "+result);
+    }
+    public static void factorialLoop(int n){
+        int result = 1;
+        for (int i=1; i<=n; i++){
+            result = result * i;
+        }
+        System.out.println("El factorial de "+n+" es "+result);
     }
 }
