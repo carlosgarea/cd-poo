@@ -1,5 +1,7 @@
 package com.campusdual.exercisespoo;
 
+import java.util.Scanner;
+
 public class Exercise07 {
     // Mostrar los primeros 15 números natuales
     // Sumar los primeros 100 números naturales
@@ -7,6 +9,7 @@ public class Exercise07 {
     // Calcular el cuadrado de los 20 primeros números naturales
     // Construye un método que recibiendo por parámetro una letra del abecedario muestre por pantala cuántas letras faltan hasta llegar a la Z
     // Escribir el abecedario e ir quitando la primera letra por cada línea
+    // Pedir al usuario su nombre y mostrar por pantalla un mensaje de bienvenida con el
 
     public static void showFirstNNumbers(int n) {
         System.out.print("Los primeros "+n+" números son: ");
@@ -48,8 +51,8 @@ public class Exercise07 {
     }
 
     public static void contarLetras2(char letra) {
-        int valorDeLetra = Integer.valueOf('Z' - letra);
-        System.out.println(valorDeLetra);
+        int valorDeLetra = 'Z' - letra;
+        System.out.println("La cantidad de letras que hay entre la " + letra + " y la Z es " + valorDeLetra);
     }
 
     public static void mostrarAbecedario() {
@@ -61,6 +64,25 @@ public class Exercise07 {
         }
     }
 
+    public static void mostrarSaludo() {
+        Scanner scan = new Scanner(System.in);
+        String nombreUsuario;
+        System.out.println("Intoduce tu nombre:\n");
+        nombreUsuario = scan.next();
+        System.out.println("Hola " + nombreUsuario + "! ¿Cómo estás?");
+    }
+
+    public static void pedirNumero() {
+        Scanner scan = new Scanner(System.in);
+        int numeroParaMostrar;
+
+        do {
+            System.out.println("Introduce un número mayor que 5:\n");
+            numeroParaMostrar = scan.nextInt();
+        } while (numeroParaMostrar < 5);
+        System.out.println("El número que has escrito es: " + numeroParaMostrar);
+    }
+
     public static void main(String[] args) {
         showFirstNNumbers(15);
         sumFirstNNumbers(100);
@@ -69,5 +91,7 @@ public class Exercise07 {
         contarLetras('V');
         contarLetras2('V');
         mostrarAbecedario();
+        mostrarSaludo();
+        pedirNumero();
     }
 }
