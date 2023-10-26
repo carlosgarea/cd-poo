@@ -9,7 +9,6 @@ public class Exercise07 {
     // Calcular el cuadrado de los 20 primeros números naturales
     // Construye un método que recibiendo por parámetro una letra del abecedario muestre por pantala cuántas letras faltan hasta llegar a la Z
     // Escribir el abecedario e ir quitando la primera letra por cada línea
-    // Pedir al usuario su nombre y mostrar por pantalla un mensaje de bienvenida con el
 
     public static void showFirstNNumbers(int n) {
         System.out.print("Los primeros "+n+" números son: ");
