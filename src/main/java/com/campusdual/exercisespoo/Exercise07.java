@@ -64,25 +64,6 @@ public class Exercise07 {
         }
     }
 
-    public static void mostrarSaludo() {
-        Scanner scan = new Scanner(System.in);
-        String nombreUsuario;
-        System.out.println("Intoduce tu nombre:\n");
-        nombreUsuario = scan.next();
-        System.out.println("Hola " + nombreUsuario + "! ¿Cómo estás?");
-    }
-
-    public static void pedirNumero() {
-        Scanner scan = new Scanner(System.in);
-        int numeroParaMostrar;
-
-        do {
-            System.out.println("Introduce un número mayor que 5:\n");
-            numeroParaMostrar = scan.nextInt();
-        } while (numeroParaMostrar < 5);
-        System.out.println("El número que has escrito es: " + numeroParaMostrar);
-    }
-
     public static void main(String[] args) {
         showFirstNNumbers(15);
         sumFirstNNumbers(100);
@@ -91,7 +72,5 @@ public class Exercise07 {
         contarLetras('V');
         contarLetras2('V');
         mostrarAbecedario();
-        mostrarSaludo();
-        pedirNumero();
     }
 }
