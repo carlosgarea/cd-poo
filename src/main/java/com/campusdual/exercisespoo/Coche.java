@@ -15,24 +15,57 @@ public class Coche {
         this.tipoCombustible = tipoCombustible;
     }
     public void arrancar(){
-        this.tacometro = 1000;
+        if (this.tacometro == 0){
+            this.tacometro = 1000;
+            System.out.println("Motor encendido");
+        } else {
+            System.out.println("¡El coche ya está arrancado!");
+        }
     }
     public void apagar(){
-        this.tacometro = 0;
+        if (this.velocimetro == 0){
+            this.tacometro = 0;
+            System.out.println("Motor apagado");
+        } else {
+            System.out.println("¡El coche no está parado!");
+        }
     }
-    public int acelerar(){
-        this.velocimetro += 10;
+    public int acelerar(int aumentoVelocidad){
+        if (this.tacometro == 0){
+            System.out.println("¡El coche no está encendido!");
+        } else if ((this.velocimetro + aumentoVelocidad) > this.velocidadMaxima) {
+            this.velocimetro = this.velocidadMaxima;
+            System.out.println("¡Se ha alcanzado la velocidad máxima! ¡El coche no puede acelerar más!");
+        } else {
+            this.velocimetro += aumentoVelocidad;
+        }
         return this.velocimetro;
     }
-    public int frenar(){
-        this.velocimetro -= 10;
+    public int frenar(int disminucionVelocidad) {
+        if (this.tacometro == 0) {
+            System.out.println("¡El coche no está encendido!");
+        } else if ((this.velocimetro - disminucionVelocidad) < 0) {
+            this.velocimetro = 0;
+            System.out.println("El coche se ha detenido");
+        } else {
+            this.velocimetro -= disminucionVelocidad;
+        }
         return this.velocimetro;
     }
     public void girarVolante(int grados){
         if (grados < 0){
-            System.out.println("Giro a la izquierda " + grados + " grados");
+            System.out.println("Giro a la izquierda de " + -grados + " grados");
         } else {
-            System.out.println("Giro a la derecha " + grados + " grados");
+            System.out.println("Giro a la derecha de " + grados + " grados");
+        }
+    }
+    public void marchaAtras(){
+        if (this.tacometro == 0){
+            System.out.println("¡El coche no está encendido!");
+        } else if (this.velocimetro != 0){
+            System.out.println("¡El coche no está parado!");
+        } else {
+            System.out.println("Marcha atrás puesta");
         }
     }
 }
