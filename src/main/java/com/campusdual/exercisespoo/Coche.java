@@ -79,7 +79,9 @@ public class Coche {
         }
     }
     public void mostrarDetalle(){
-        System.out.println(this.marca + " " + this.modelo + " " + this.tipoCombustible + " Máx.: " + this.velocidadMaxima + " km/h");
-        System.out.println("Vel.: " + this.velocimetro + " km/h - " + "Rev.: " + this.tacometro + " rpm - " + this.giro + "º de giro");
+        System.out.println(this.marca + " " + this.modelo + " " + this.tipoCombustible + " Máx.: " +
+                this.velocidadMaxima + " km/h");
+        System.out.println("Vel.: " + this.velocimetro + " km/h - " + "Rev.: " + this.tacometro + " rpm - " +
+                this.giro + "º de giro");
         }
 }
