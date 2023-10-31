@@ -19,12 +19,13 @@ public class Sandbox {
         perro2.levantarPatita();
 */
         Coche miCoche = new Coche("Nissan", "Qasqhai", 220, "Diesel");
+        miCoche.mostrarDetalle();
         miCoche.arrancar();
         System.out.println("Velocidad actual: " + miCoche.acelerar(250) + " km/h");
         System.out.println("Velocidad actual: " + miCoche.frenar(300) + " km/h");
         miCoche.marchaAtras();
         System.out.println("Velocidad actual: " + miCoche.acelerar(10) + " km/h");
-        miCoche.girarVolante(-15);
+        miCoche.girarVolante(-150);
         System.out.println("Velocidad actual: " + miCoche.frenar(10) + "km/h");
         miCoche.apagar();
     }

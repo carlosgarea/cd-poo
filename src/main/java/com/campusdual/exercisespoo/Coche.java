@@ -7,6 +7,7 @@ public class Coche {
     public String tipoCombustible;
     public int velocimetro = 0;
     public int tacometro = 0;
+    public int giro = 0;
 
     public Coche(String marca, String modelo, int velocidadMaxima, String tipoCombustible){
         this.marca = marca;
@@ -54,10 +55,19 @@ public class Coche {
     }
     public void girarVolante(int grados){
         if (grados < 0){
+            if (grados < -45){
+                grados = -45;
+            }
             System.out.println("Giro a la izquierda de " + -grados + " grados");
-        } else {
+        } else if (grados > 0){
+            if (grados > 45){
+                grados = 45;
+            }
             System.out.println("Giro a la derecha de " + grados + " grados");
+        } else {
+            System.out.println("Ruedas rectas");
         }
+        this.giro = grados;
     }
     public void marchaAtras(){
         if (this.tacometro == 0){
@@ -68,4 +78,8 @@ public class Coche {
             System.out.println("Marcha atrás puesta");
         }
     }
+    public void mostrarDetalle(){
+        System.out.println(this.marca + " " + this.modelo + " " + this.tipoCombustible + " Máx.: " + this.velocidadMaxima + " km/h");
+        System.out.println("Vel.: " + this.velocimetro + " km/h - " + "Rev.: " + this.tacometro + " rpm - " + this.giro + "º de giro");
+        }
 }
