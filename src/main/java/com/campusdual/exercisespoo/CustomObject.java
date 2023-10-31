@@ -2,8 +2,8 @@ package com.campusdual.exercisespoo;
 
 public class CustomObject {
 
-    public int actualFuel = 10;
-    public static String fuelLabel = "Gasolina";
+    private int actualFuel = 10; //se pasó de public a private
+    private static String fuelLabel = "Gasolina"; //se pasó de public a private
 
     public int getActualFuel(){
         return this.actualFuel;

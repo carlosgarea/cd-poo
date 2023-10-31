@@ -22,6 +22,7 @@ public class Coche {
         } else {
             System.out.println("¡El coche ya está arrancado!");
         }
+        mostrarDetalle();
     }
     public void apagar(){
         if (this.velocimetro == 0){
@@ -30,6 +31,7 @@ public class Coche {
         } else {
             System.out.println("¡El coche no está parado!");
         }
+        mostrarDetalle();
     }
     public int acelerar(int aumentoVelocidad){
         if (this.tacometro == 0){
@@ -40,6 +42,7 @@ public class Coche {
         } else {
             this.velocimetro += aumentoVelocidad;
         }
+        mostrarDetalle();
         return this.velocimetro;
     }
     public int frenar(int disminucionVelocidad) {
@@ -51,6 +54,7 @@ public class Coche {
         } else {
             this.velocimetro -= disminucionVelocidad;
         }
+        mostrarDetalle();
         return this.velocimetro;
     }
     public void girarVolante(int grados){
@@ -68,6 +72,7 @@ public class Coche {
             System.out.println("Ruedas rectas");
         }
         this.giro = grados;
+        mostrarDetalle();
     }
     public void marchaAtras(){
         if (this.tacometro == 0){
@@ -77,11 +82,13 @@ public class Coche {
         } else {
             System.out.println("Marcha atrás puesta");
         }
+        mostrarDetalle();
     }
     public void mostrarDetalle(){
         System.out.println(this.marca + " " + this.modelo + " " + this.tipoCombustible + " Máx.: " +
                 this.velocidadMaxima + " km/h");
         System.out.println("Vel.: " + this.velocimetro + " km/h - " + "Rev.: " + this.tacometro + " rpm - " +
                 this.giro + "º de giro");
-        }
+        System.out.println();
+    }
 }
