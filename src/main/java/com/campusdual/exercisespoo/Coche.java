@@ -91,4 +91,17 @@ public class Coche {
                 this.giro + "º de giro");
         System.out.println();
     }
+
+    public static void main(String[] args) {
+        Coche miCoche = new Coche("Nissan", "Qasqhai", 220, "Diesel");
+        miCoche.arrancar();
+        miCoche.acelerar(250);
+        miCoche.frenar(300);
+        miCoche.marchaAtras();
+        miCoche.girarVolante(-150);
+        miCoche.acelerar(10);
+        miCoche.girarVolante(0);
+        miCoche.frenar(10);
+        miCoche.apagar();
+    }
 }
