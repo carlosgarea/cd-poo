@@ -45,7 +45,9 @@ public class Dolphin extends Fish{
     public void setSound(String sound) {
         this.sound = sound;
     }
-    public void introduce (){
-        System.out.println(getSound() + " (" + getAnimalName() + ")");
+
+    @Override
+    public void introduce() {
+        System.out.println(this.getSound() + " (" + this.getAnimalName() + ")");
     }
 }

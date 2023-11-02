@@ -1,6 +1,6 @@
 package com.campusdual.exercisespoo.exerciseHerencia;
 
-public class Animal {
+public abstract class Animal {
     protected int height;
     protected int weight;
     protected int age;
@@ -45,6 +45,7 @@ public class Animal {
             System.out.println("¡La edad no puede ser negativa! Introduce un número mayor que 0");
         }
     }
+    public abstract void introduce();
     // Animal: Altura Peso Edad
     // Mamíferos, aves y peces: 2 características únicas de estos animales [colorPelaje, infraclase] [colorPlumaje, alturaVueloMax] [tipoAgua, profundidad]
     // Perro, Caballo, Halcón, Pollo, Delfín, Orca: nombre científico, nombre del animal, territorio donde viven, sonido del animal

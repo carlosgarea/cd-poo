@@ -1,6 +1,6 @@
 package com.campusdual.exercisespoo.exerciseHerencia;
 
-public class Mammal extends Animal{
+public abstract class Mammal extends Animal{
 
     protected String hairColor;
     protected String infraclass;
@@ -26,4 +26,7 @@ public class Mammal extends Animal{
     public void setInfraclass(String infraclass) {
         this.infraclass = infraclass;
     }
+
+    @Override
+    public abstract void introduce();
 }

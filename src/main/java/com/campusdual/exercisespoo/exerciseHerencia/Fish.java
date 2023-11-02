@@ -1,6 +1,6 @@
 package com.campusdual.exercisespoo.exerciseHerencia;
 
-public class Fish extends Animal{
+public abstract class Fish extends Animal{
     protected String waterType;
     protected int depth;
     public Fish(int height, int weight, int age, String waterType, int depth) {
@@ -24,4 +24,7 @@ public class Fish extends Animal{
     public void setDepth(int depth) {
         this.depth = depth;
     }
+
+    @Override
+    public abstract void introduce();
 }

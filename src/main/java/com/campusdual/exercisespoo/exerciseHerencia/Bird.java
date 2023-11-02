@@ -1,6 +1,6 @@
 package com.campusdual.exercisespoo.exerciseHerencia;
 
-public class Bird extends Animal{
+public abstract class Bird extends Animal{
     protected String featherColor;
     protected int maxFlightHeight;
     public Bird(int height, int weight, int age, String featherColor, int maxFlightHeight) {
@@ -24,4 +24,7 @@ public class Bird extends Animal{
     public void setMaxFlightHeight(int maxFlightHeight) {
         this.maxFlightHeight = maxFlightHeight;
     }
+
+    @Override
+    public abstract void introduce();
 }

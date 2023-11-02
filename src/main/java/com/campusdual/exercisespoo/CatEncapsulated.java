@@ -65,7 +65,11 @@ public class CatEncapsulated {
         return eyeColour;
     }
 
-//METODOS DEL EJERCICIO
+    public int getAge() {
+        return age;
+    }
+
+    //METODOS DEL EJERCICIO
     public void setHairColour(String hairColour) {
         this.colour = hairColour;
         System.out.println("Color de pelo cambiado a: " + this.colour);
@@ -81,9 +85,6 @@ public class CatEncapsulated {
         } else {
             System.out.println("No se pudo establecer la edad introducida por ser negativa");
         }
-    }
-    public void getAge(){
-        System.out.println("Edad: " + this.age);
     }
     public void castrate(){
         if (this.castrated) {
@@ -112,9 +113,9 @@ public class CatEncapsulated {
         return mensaje;
     }
     public void catDetaisls() {
-        System.out.println(this.name + " es " + getSex() + " de la raza " + this.breed + " de " + this.age +
-                " meses, tiene el pelo " + this.hair + " de color " + this.colour + " y los ojos de color " +
-                this.eyeColour + ". " + isCastrated());
+        System.out.println(this.getName() + " es " + getSex() + " de la raza " + this.getBreed() + " de " + this.getAge() +
+                " meses, tiene el pelo " + this.getHair() + " de color " + this.getColour() + " y los ojos de color " +
+                this.getEyeColour() + ". " + isCastrated());
     }
 
     public static void main(String[] args) {
