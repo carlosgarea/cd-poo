@@ -46,8 +46,8 @@ public abstract class Animal {
         }
     }
     public abstract void introduce();
-    // Animal: Altura Peso Edad
-    // Mamíferos, aves y peces: 2 características únicas de estos animales [colorPelaje, infraclase] [colorPlumaje, alturaVueloMax] [tipoAgua, profundidad]
-    // Perro, Caballo, Halcón, Pollo, Delfín, Orca: nombre científico, nombre del animal, territorio donde viven, sonido del animal
-    // Todos los animales pueden presentarse: ONOMATOPEYA DEL SONIDO (NOMBRE DEL ANIMAL)
 }
+// Animal: Altura Peso Edad
+// Mamíferos, aves y peces: 2 características únicas de estos animales [colorPelaje, infraclase] [colorPlumaje, alturaVueloMax] [tipoAgua, profundidad]
+// Perro, Caballo, Halcón, Pollo, Delfín, Orca: nombre científico, nombre del animal, territorio donde viven, sonido del animal
+// Todos los animales pueden presentarse: ONOMATOPEYA DEL SONIDO (NOMBRE DEL ANIMAL)
