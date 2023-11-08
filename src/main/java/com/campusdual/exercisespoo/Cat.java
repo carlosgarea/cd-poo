@@ -7,7 +7,7 @@ public class Cat {
     private static int age;
     private String hair;
     private static String colour;
-    private static boolean castrated;
+    private boolean castrated;
     private String eyeColour = "verde";
 
     public Cat(String name, String breed, String sex, int age, String hair, String colour, boolean castrated) {
@@ -17,70 +17,118 @@ public class Cat {
         Cat.age = age;
         this.hair = hair;
         Cat.colour = colour;
-        Cat.castrated = castrated;
+        this.castrated = castrated;
     }
+    //GETTERS Y SETTERS GENERADOS AUTOMÁTICAMENTE
+
+
+    public String getName() {
+        return this.name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getBreed() {
+        return this.breed;
+    }
+
+    public void setBreed(String breed) {
+        this.breed = breed;
+    }
+
+    public void setSex(String sex) {
+        this.sex = sex;
+    }
+
+    public String getHair() {
+        return this.hair;
+    }
+
+    public void setHair(String hair) {
+        this.hair = hair;
+    }
+
+    public static String getColour() {
+        return colour;
+    }
+
+    public static void setColour(String colour) {
+        Cat.colour = colour;
+    }
+
+    public void setCastrated(boolean castrated) {
+        this.castrated = castrated;
+    }
+
+    public String getEyeColour() {
+        return this.eyeColour;
+    }
+
+    // MÉTODOS DEL QUE MANDA EL EJERCICIO
     public static void setHairColour(String hairColour) {
         Cat.colour = hairColour;
         System.out.println("Color de pelo cambiado a: " + Cat.colour);
     }
-    public void setEyeColour(String eyeColour){
+
+    public void setEyeColour(String eyeColour) {
         this.eyeColour = eyeColour;
         System.out.println("Color de ojos cambiado a: " + this.eyeColour);
     }
-    public static void setAge(int age){
-        if (age > 0){
-        Cat.age = age;
-        System.out.println("Edad cambiada a: " + Cat.age);
+
+    public static void setAge(int age) {
+        if (age > 0) {
+            Cat.age = age;
+            System.out.println("Edad cambiada a: " + Cat.age);
         } else {
             System.out.println("No se pudo establecer la edad introducida por ser negativa");
         }
     }
-    public void getAge(){
-        System.out.println("Edad: " + Cat.age);
+
+    public int getAge() {
+        return Cat.age;
     }
-    public static void castrate(){
-        if (Cat.castrated) {
-            System.out.println("El gato ya está castrado");
-        } else {
-            Cat.castrated = true;
-            System.out.println("Se ha castrado al gato");
-        }
+
+    public void castrate(boolean isCastrated) {
+        this.castrated = isCastrated;
     }
-    public String isCastrated() {
+
+    public Boolean isCastrated() {
+        return this.castrated;
+    }
+
+    public String getSex() {
+        return this.sex;
+    }
+
+    public String mensajeCastrated() {
         String mensaje;
-        if (Cat.castrated) {
+        if (this.isCastrated()) {
             mensaje = "Está castrado";
         } else {
             mensaje = "No está castrado";
         }
         return mensaje;
     }
-    public String getSex() {
-        String mensaje = "";
-        if (this.sex == "macho") {
-            mensaje = "un gato";
-        } else if (this.sex == "hembra") {
-            mensaje = "una gata";
-        }
-        return mensaje;
-    }
+
     public void catDetaisls() {
-        System.out.println(this.name + " es " + getSex() + " de la raza " + this.breed + " de " + Cat.age +
-                " meses, tiene el pelo " + this.hair + " de color " + Cat.colour + " y los ojos de color " +
-                this.eyeColour + ". " + isCastrated());
+        System.out.println(this.getName() + " es " + this.getSex() + " de la raza " + this.getBreed() + " de " + this.getAge() +
+                " meses, tiene el pelo " + this.getHair() + " de color " + getColour() + " y los ojos de color " +
+                this.getEyeColour() + ". " + this.mensajeCastrated());
     }
 
     public static void main(String[] args) {
         Cat gatoSiames = new Cat("Bebeto", "siamesa", "macho", 36, "corto", "blanco", false);
         gatoSiames.catDetaisls();
-        Cat.castrate();
+        gatoSiames.castrate(true);
         Cat.setHairColour("negro");
         gatoSiames.catDetaisls();
         System.out.println();
 
         Cat gatoPersa = new Cat("Max", "persa", "macho", 48, "largo", "marrón", false);
         gatoPersa.catDetaisls();
-        Cat.castrate();
+        gatoPersa.castrate(true);
         Cat.setHairColour("naranja");
         gatoPersa.catDetaisls();
         System.out.println();
