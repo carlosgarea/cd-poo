@@ -20,6 +20,6 @@ public class Person {
         this.surname = surname;
     }
     public void getDetails(){
-        System.out.println("Nombre compelto: " + this.getName() + " " + this.getSurname());
+        System.out.println("Nombre completo: " + this.getName() + " " + this.getSurname());
     }
 }

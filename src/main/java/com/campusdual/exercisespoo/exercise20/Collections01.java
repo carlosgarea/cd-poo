@@ -19,6 +19,10 @@ public class Collections01 {
         stringList.add(new PoliceOfficer("Jake", "Peralta", "B-99"));
         stringList.add(new Doctor("Gregory", "House", "Nefrología e infectología"));
 
+//        for (int i = 0; i < stringList.size(); i++){
+//            stringList.get(i).getDetails();
+//        }
+
         for (Person p : stringList) {
             p.getDetails();
         }
