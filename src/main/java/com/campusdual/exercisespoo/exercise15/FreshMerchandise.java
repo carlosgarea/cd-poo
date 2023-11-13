@@ -22,8 +22,8 @@ public class FreshMerchandise extends Merchandise{
         return this.expirationDate;
     }
 
-    public void setExpirationDate(Date exirationDate) {
-        this.expirationDate = exirationDate;
+    public void setExpirationDate(Date expirationDate) {
+        this.expirationDate = expirationDate;
     }
 
     @Override
