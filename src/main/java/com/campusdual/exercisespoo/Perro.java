@@ -1,5 +1,7 @@
 package com.campusdual.exercisespoo;
 
+import org.json.simple.JSONObject;
+
 public class Perro {
     int altura;
     boolean esDePeloLargo;
@@ -16,6 +18,70 @@ public class Perro {
         this.nombre = nombre;
         this.color = color;
         this.peso = peso;
+    }
+
+    public Perro(JSONObject obj){
+        this.altura = Math.toIntExact((long) obj.get("altura"));
+        this.esDePeloLargo = (boolean) obj.get("esDePeloLargo");
+        this.raza = (String) obj.get("raza");
+        this.nombre = (String) obj.get("nombre");
+        this.color = (String) obj.get("color");
+        this.peso = Math.toIntExact((long) obj.get("peso"));
+    }
+    public int getAltura() {
+        return altura;
+    }
+
+    public void setAltura(int altura) {
+        this.altura = altura;
+    }
+
+    public boolean isEsDePeloLargo() {
+        return esDePeloLargo;
+    }
+
+    public void setEsDePeloLargo(boolean esDePeloLargo) {
+        this.esDePeloLargo = esDePeloLargo;
+    }
+
+    public String getRaza() {
+        return raza;
+    }
+
+    public void setRaza(String raza) {
+        this.raza = raza;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public String getColor() {
+        return color;
+    }
+
+    public void setColor(String color) {
+        this.color = color;
+    }
+
+    public int getPeso() {
+        return peso;
+    }
+
+    public void setPeso(int peso) {
+        this.peso = peso;
+    }
+
+    public boolean isEstaDormido() {
+        return estaDormido;
+    }
+
+    public void setEstaDormido(boolean estaDormido) {
+        this.estaDormido = estaDormido;
     }
 
     public void ladrar(){
@@ -76,6 +142,17 @@ public class Perro {
         } else {
             System.out.println(this.nombre + " ya está despierto");
         }
+    }
+
+    public JSONObject toJSON(){
+        JSONObject jsonObject = new JSONObject();
+        jsonObject.put("altura", this.getAltura());
+        jsonObject.put("esDePeloLargo", this.isEsDePeloLargo());
+        jsonObject.put("raza", this.getRaza());
+        jsonObject.put("nombre", this.getNombre());
+        jsonObject.put("color", this.getColor());
+        jsonObject.put("peso", this.getPeso());
+        return jsonObject;
     }
 
     public static void main(String[] args) {
