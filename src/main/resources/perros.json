@@ -1,1 +1,28 @@
-{"perros":[{"raza":"Huskey","color":"Gris","altura":90,"peso":25,"esDePeloLargo":true,"nombre":"Balto"},{"raza":"Labrador","color":"Negro","altura":80,"peso":15,"esDePeloLargo":false,"nombre":"Roco"},{"raza":"Pastor alemán","color":"Bicolor","altura":85,"peso":30,"esDePeloLargo":true,"nombre":"Rex"}]}
+{
+  "perros": [
+    {
+      "raza": "Huskey",
+      "color": "Gris",
+      "altura": 90,
+      "peso": 25,
+      "esDePeloLargo": true,
+      "nombre": "Balto"
+    },
+    {
+      "raza": "Labrador",
+      "color": "Negro",
+      "altura": 80,
+      "peso": 15,
+      "esDePeloLargo": false,
+      "nombre": "Roco"
+    },
+    {
+      "raza": "Pastor alemán",
+      "color": "Bicolor",
+      "altura": 85,
+      "peso": 30,
+      "esDePeloLargo": true,
+      "nombre": "Rex"
+    }
+  ]
+}
